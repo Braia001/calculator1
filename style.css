@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+body {
+    font-family: sans-serif;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    background-image: url("background-image.jpg");
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000000;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    color: #333;
+}
+
+.theme-toggler.active::before {
+    background-color: #fff;
+}
+
+.theme-toggler::before {
+    background-color: #ffffff;
+}
+
+#display {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {
+    height: 130px;
+}
+
+/* Historico */
+.history {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100vh;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.history h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-list {
+    background-color: #f0f0f0;
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.history-item {
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Aqui fica presente o texto */
+.text {
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 23%;
+    color: #fff;   
+    padding: 10px;
+    margin-top: -600px;
+    margin-left: 150px;
+    transition: background-color 0.3s, color 0.3s;
+}
